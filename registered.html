@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="css/registered.css">
 </head>
 <body>
+<div class="scrollTop">
+                <div class="ask">
+                    <img src="img/3.jpg" alt="">
+                    <p>在线咨询</p>
+                </div>
+                <div class="scro" id="btn">
+                        <img src="img/4.jpg" alt="">
+                        <p>回到顶部</p>
+                </div>
+ </div>
     <div class="top">
         <a href="#">YSL细管哑光口红,全新上市!浓郁哑致,释放不羁态度.立即试色,拥有你的专属不羁唇色!</a>
     </div> 
@@ -86,7 +96,7 @@
                             </div>
                         </div>
                     </li> 
-                    <li id="repeat" style="display:flex;">欢迎：<p class="stuIdSpan"></p><p id="exit" style="margin:0;cursor: pointer;">退出</p></li>  
+                    <li id="repeat" style="display:flex;">欢迎：<p class="stuIdSpan" id="span"></p><p id="exit" style="margin:0;cursor: pointer;">退出</p></li>  
                  <li  class="second three"><a href="#">登录与注册</a>
                     <span class="spann2"></span>
                         <div class="list lii">
@@ -129,13 +139,38 @@
                             </div>
                         </div>
                 </li>
-                <li  class="second four"><i class="iconfont icon-gouwudai"><a href="#">购物袋—0件商品</a></i>
+                <li  class="second four"><i class="iconfont icon-gouwudai"><a id="ah">购物袋—<span id="ww">0</span>件商品</a></i>
                     <span class="spann3"></span>
                         <div class="list lii">
-                            <p>您的圣罗兰购物袋是空的.</p>
-                            <a class="as" href="#"> 马上添加您最喜欢圣罗兰的产品</a>
+                            <!-- <div id="wu">
+                                <p>您的圣罗兰购物袋是空的.</p>
+                                <a class="as" href="#"></a> 马上添加您最喜欢圣罗兰的产品</a>
+                            </div> -->
+                            <div id="you" class="small_car" >
+                                <div class="shop_top" style="display:flex; height:50px;border-bottom:1px solid black">
+                                    <h5 style="font-size: 16px;">我的购物袋</h5>
+                                    <h6 style="margin-left:300px";>数量</h6>
+                                    <h6 style="margin-left:100px";>价格</h6>
+                                </div>
+                                <div id="small_car" style="height:300px;overflow:auto;">
+                                <!-- <div class="shop_car" style="display:flex;margin-top:20px;margin-bottom:0!important;">
+                                    <img src="https://res.yslbeautycn.com/resources/2018/11/15/15422741109757236_238X265.jpg?version=2018122801103" alt="" style="width:100px;height:100px;border:1px solid black;">
+                                        <div class="shop_infor" style="text-align: left;margin-left:20px;">
+                                             <p style="margin-top:0px;font-size:14px;">圣罗兰莹亮纯魅液体唇膏</p>
+                                             <p style="margin-top:0px;font-size:14px; line-height:0;"><img style="width:20px;height:20px;" src="https://res.yslbeautycn.com/resources/2018/11/1/propertyImage/1541005563237.jpg"><span>#1  粉白色</span></p>
+                                             <p style="margin-top:0px;font-size:14px;"><a href="#"><u>删除</u></a></p>
+                                        </div>
+                                        <span style="margin-left:120px; font-weight:900;margin-top:50px;">1</span>
+                                        <span style="margin-left:90px;font-weight:900;margin-top:50px;">￥355</span>
+                                    </div> -->
+                                </div>
+                                    <div class="shop_num" style="display:flex;justify-content: space-between;margin-top:60px!important;">
+                                        <p style="margin-top:0;line-height:0;">合计</p>
+                                        <p style="margin-top:0; font-weight:900;line-height:0;">￥355</p>
+                                    </div>
+                                    <div id="money" class="money"><a href="#" id="xx">立即结算</a></div>
+                            </div>
                         </div>
-                        <span class="spann5" style="width:0; height:0; border:7px solid transparent; border-top-color:black; position:absolute;left:110px;top:6px;"></span>
                 </li>
             </ul>
         </div>
@@ -417,10 +452,10 @@
                      </div>
                      <div class="user_input">
                          <ul class="user_ul">
-                            <li ><div class="strong"></div><p class="str_p">密码强度</p></li>
+                            <li ><div class="strong" id="stro"></div><p class="str_p">密码强度</p></li>
                          </ul>
                          <ul class="user_ul">
-                             <li ><div class="strong"></div><p class="str_p">密码强度</p></li>   
+                             <li ><div class="strong" id="str"></div><p class="str_p">密码强度</p></li>   
                         </ul>
                     </div>
                     <div class="user_input">
@@ -441,7 +476,7 @@
                         <input type="checkbox"><span>我愿意订阅圣罗兰电子杂志。</span><br/>
                         <input type="checkbox"><span>我同意依照本使用条款和隐私政策对我的个人信息进行收集和使用；我已阅读并确认被给予充分机会理解该使用条款和隐私政策的内容。</span>
                      </div>
-                     <input class="button" id="btn" type="button" value="同意协议并注册">
+                     <input class="button" id="btns" type="button" value="同意协议并注册">
                 </div>
             </div>
             <div class="section_right">
@@ -559,19 +594,61 @@
 		pu("#userphone").onblur=function(){
 			var reg=/^1[3-9]\d{9}$/i;
 			if(reg.test(this.value)){
-                pu("#tt ").style.display="none"
+                pu("#tt ").style.display="none";
 			}else{
 				pu("#tt").style.display="block";
 			}
 		}
 		pu("#userpass").onblur=function(){
-			var reg=/^\w{8,20}$/i;
+			var reg=/^\w{12,20}$/i;
 			if(reg.test(this.value)){
                 pu("#rr").style.display="none"
 			}else{
                 pu("#rr").style.display="block"
 			}
 		}
+        pu("#userpass").oninput=function(){
+			var reg=/^\w{12,20}$/i;
+			if(reg.test(this.value)){
+                pu("#stro").style.width=450+"px";
+                pu("#stro").style.backgroundColor="orange";
+			}
+            var re=/^[a-zA-Z0-9]{8}$/i;
+            if(re.test(this.value)){
+                pu("#rr").style.display="none"
+                pu("#stro").style.width=150+"px";
+                pu("#stro").style.backgroundColor="green";
+            }
+            var eg=/^[a-zA-Z0-9]{9,12}$/i;
+            if(eg.test(this.value)){
+                pu("#rr").style.display="none"
+                pu("#stro").style.width=300+"px";
+                pu("#stro").style.backgroundColor="yellow";
+            }
+		}
+
+
+        pu("#passd").oninput=function(){
+			var reg=/^\w{12,20}$/i;
+			if(reg.test(this.value)){
+                pu("#str").style.width=450+"px";
+                pu("#str").style.backgroundColor="orange";
+			}
+            var re=/^[a-zA-Z0-9]{8}$/i;
+            if(re.test(this.value)){
+                pu("#rr").style.display="none"
+                pu("#str").style.width=150+"px";
+                pu("#str").style.backgroundColor="green";
+            }
+            var eg=/^[a-zA-Z0-9]{9,12}$/i;
+            if(eg.test(this.value)){
+                pu("#rr").style.display="none"
+                pu("#str").style.width=300+"px";
+                pu("#str").style.backgroundColor="yellow";
+            }
+		}
+
+
 		pu("#passd").onblur=function(){
 			if((pu("#passd").value)==(pu("#userpass").value)){
 				pu("#ss").style.display="none"
@@ -579,7 +656,7 @@
 				pu("#ss").style.display="block"
 			}
 		}
-	pu("#btn").onclick=function(){
+	pu("#btns").onclick=function(){
 			let xhr=new XMLHttpRequest();
 			let sender="userphone="+pu("#userphone").value+"&userpass="+ pu("#userpass").value+"&username="+ pu("#username").value;
 			xhr.open("get","php/registered.php?"+sender,true);
@@ -599,8 +676,47 @@
 			}
 			xhr.send();
 	}
+    ajxdthree();
+         pu("#ah").onclick=function(){
+             pu("#ah").href="shoppingcar.html?vipName="+vipName;
+         }
 }
-
+function ajxdthree(){
+        let vipName=pu("#span").innerHTML;
+        console.log(vipName);
+		 let three=new XMLHttpRequest();
+		 three.open("get","php/getShoppingCart.php?vipName="+vipName,true);
+		 three.onreadystatechange=function(){
+		 	 if(three.readyState==4 && three.status==200){
+		 	 	  showr(three.responseText);
+		 	 	//   console.log(ajx.responseText);
+		 	 }
+		 }
+		 three.send();
+	}
+	function showr(objj){
+		  let objs=JSON.parse(objj);
+          let htmlstr="";
+          let htmlstrs="";
+          console.log(objs);
+          for(let j in objs){
+         htmlstr+=` <div class="shop_car" style="display:flex;margin-top:20px;margin-bottom:0!important;">
+                                            <img src="${objs[j].goodsImg}" alt="" style="width:100px;height:100px;border:1px solid black;">
+                                                <div class="shop_infor" style="text-align: left;margin-left:20px;width:170px;">
+                                                     <p style="margin-top:0px;font-size:14px;">${objs[j].goodsName}</p>
+                                                     <p style="margin-top:0px;font-size:14px; line-height:0;"><img style="width:20px;height:20px;" src="${objs[j].beiyong1}"><span>#1  粉白色</span></p>
+                                                     <p style="margin-top:0px;font-size:14px;"><a href="#"><u>删除</u></a></p>
+                                                </div>
+                                                <span style="margin-left:120px; font-weight:900;margin-top:50px;">${objs[j].goodsCount}</span>
+                                                <span style="margin-left:90px;font-weight:900;margin-top:50px;">￥${objs[j].goodsPrice}</span>
+                                            </div>`;
+                                            pu("#ww").innerHTML=objs.length;
+          }
+          htmlstrs+=`<a href="shoppingcar.html?vipname=${objs[0].vipName}" style=" color:white;">立即结算</a>`;
+         pu("#small_car").innerHTML+=htmlstr;
+         pu("#money").innerHTML+=htmlstrs;
+         pu("#xx").style.display="none";
+    }
 </script>	
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="js/cookieTools.js"></script>
@@ -621,6 +737,23 @@
         $(".stuIdSpan").css({"display":"none"});
         $("#repeat").css({"display":"none"})
         $(".three").css({"display":"block"})
+    })
+})
+$(function () {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 100) {
+            $(".scro").fadeIn(1500);
+            $(".ask").fadeIn(1500);
+        } else {
+            $(".ask").fadeOut(1500);
+            $(".scro").fadeOut(1500);
+        }
+    });
+    $("#btn").click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 1000);
+        return false;
     })
 })
 </script>
