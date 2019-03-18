@@ -98,13 +98,14 @@ section{
 }
 .product{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-top:45px;
     border-top:1px solid #e5e5e5;
 }
 .prod{
     width:240px;
+    margin-right:20px;
     border:1px solid #e5e5e5;
     margin-top:20px;
     margin-bottom:35px;
@@ -115,6 +116,7 @@ section{
     margin-bottom:30px;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 .prod_color li{
     list-style: none;

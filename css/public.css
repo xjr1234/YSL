@@ -6,6 +6,34 @@ a{
     text-decoration:none;
     color:black;
 }
+.scrollTop{
+    position:fixed;
+    top:300px;
+    right:0;
+    z-index: 5;
+}
+.scrollTop img{
+    margin-top:20px;
+}
+.ask{
+    width:80px;
+    height:110px;
+    background:black;
+    color:white;
+    font-size: 14px;
+    text-align: center;
+    border-bottom:1px solid #575757;
+    line-height: 30px;
+}
+.scro{
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    width:80px;
+    height:110px;
+    background:black;
+    color:white;
+}
 .top{
     width:100%;
     height:35px;
@@ -14,7 +42,7 @@ a{
     justify-content: center;
 }
 #repeat{
-    display: none;
+    display:none;
 }
 #repeat .stuIdSpan{
     margin:0!important;
@@ -282,7 +310,6 @@ header{
 }
 .four .lii{
     width:560px;
-    height:300px;
     text-align: center;
 }
 .four p{
@@ -587,4 +614,52 @@ footer{
 }
 .mgs:hover .no{
     display:block;
+}
+.money{
+    margin-top:50px;
+    width:200px;
+    height:40px;
+    background:black;
+    
+    margin-left:350px;
+}
+.money a{
+    color:white;
+}
+
+@media screen and (max-width:750px){
+	.top{
+        display: none;
+    }
+    .head{
+        width:100%;
+    }
+    .prompt{
+        display: none;
+    }
+    .prompt_right{
+        display: none;
+    }
+    .imgs{
+        width:183px;
+         height:31px;
+         display:block;
+         margin:0 auto;
+    }
+    .navs{
+        width:100%;
+        background:#cfcfcf;
+    }
+    .search{
+        display: none;
+    }
+    .details{
+        margin-top:10px;
+        margin-bottom: 0;
+       
+    }
+    .details li{
+      margin-right:20px;
+      
+    }
 }

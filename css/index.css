@@ -372,3 +372,17 @@ section{
 	font-size:12px;
 	color:#b9b9b7;
 }
+/* @media screen and (max-width:600px){
+	.seccc{
+		display: flex;
+		width:100%;
+		flex-direction: column;
+	}
+	.fav{
+		
+		flex-direction: column;
+	}
+	.show{
+		width:80%;
+	}
+} */
