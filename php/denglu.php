@@ -10,23 +10,11 @@
 		// die("连接失败".mysql_error());
 	}else{
 		//2、选择数据库
-		mysql_select_db("ysl",$conn);
+		mysql_select_db("longchamp",$conn);
 		//3、执行SQL语句
-		$sqlstr="select * from usertable where userphone='$userphone' and userpass='$userpass'";
-		$str="select username from usertable where userphone='$userphone'";
-		$results=mysql_query($str,$conn);
-
-		$query_row = mysql_fetch_array($results);
-		if($query_row){
-			echo $query_row[0];
-		}else{
-			echo "";
-		}
-
+		$sqlstr="select * from champ where userphone='$userphone' and userpass='$userpass'";
 		$result=mysql_query($sqlstr,$conn);
-		echo $result;
 		mysql_close($conn);
-		
 		if(mysql_num_rows($result)==0){
 			echo "0";
 		}else{
